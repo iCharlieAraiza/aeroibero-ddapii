@@ -1,3 +1,3 @@
 # aeroibero-ddapii
 
-Proyecto para la asignatura de Desarrollo de Aplicaiciones II
+Proyecto para la asignatura de Desarrollo de Aplicaciones II
