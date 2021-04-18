@@ -1,12 +1,12 @@
 entity TarjetaCredito {
-    id Long
+	id Long
     numeroTarjeta String
     caducidad Date
     nip String
 }
 
 entity Cliente{
-    id Long
+	id Long
     nombre String
     apellidoPaterno String
     apellidoMaterno String
@@ -25,7 +25,7 @@ enum Estatus {
 
 
 entity Viaje{
-    id Long
+	id Long
     tipoViaje String
     distancia Double
     tiempoTotal Time
@@ -33,31 +33,31 @@ entity Viaje{
 }
 
 entity Pais {
-    id Long
+	id Long
     nombre String
 }
 
 entity Ciudad {
-    id Long
+	id Long
     nombre String
 }
 
 entity Aeropuerto {
-    id Long
+	id Long
     nombre String
 }
 
 
 relationship OneToOne {
-    TarjetaCredito{cliente} to Cliente
+	TarjetaCredito{cliente} to Cliente
 }
 
 relationship OneToMany {
-    Boleto{cliente} to Cliente
+	Cliente{boleto} to Boleto
 }
 
 relationship OneToMany {
-    Boleto{viaje} to Viaje
+	Boleto{viaje} to Viaje
 }
 
 relationship OneToMany{
