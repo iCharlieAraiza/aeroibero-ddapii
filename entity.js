@@ -1,5 +1,5 @@
 entity TarjetaCredito {
-	id Long
+    id Long
     numeroTarjeta String
     caducidad Date
     nip String
