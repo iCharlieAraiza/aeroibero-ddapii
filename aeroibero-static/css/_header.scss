@@ -1,0 +1,38 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+    box-shadow: $shadow;
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    a{
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    button{
+        background-color: transparent;
+        border: none;
+        margin-right: 1rem;
+        i{
+            font-size: 18px;
+            color: $color-base-grey;
+        }
+    }
+
+    .user{
+        a{
+            padding-right: 1rem;
+        }
+    }
+}
+
+.logo{
+    margin-right: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    img{
+        width: 140px;
+    }
+}

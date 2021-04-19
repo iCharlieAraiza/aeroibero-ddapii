@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
 	<link href="http://asistentevoz.codigohabil.com/sc/grid.css"rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Aeroibero</title>
 </head>
 <body>
@@ -15,7 +17,7 @@
             <div class="btn-menu">
                 <button>
                     <div class="div">
-
+                        <i class="fas fa-bars"></i>
                     </div>
                 </button>
             </div>
@@ -23,18 +25,54 @@
         <div class="logo">
             <img src="img/logo_ai.jpg" alt="">
         </div>
-        <div class="user-logo"></div>
+        <div class="user-section">
+            <div class="user">
+                <a href="http://">Usuario</a>
+            </div>
+        </div>
     </header>
 
     <main>
         <div class="fluid-container">
-            <div class="row">
-                <div class="col-md-4">
-
+            <div class="row row-main">
+                <div class="col-md-2">
+                    <div class="menu-section">
+                        <div class="menu-header menu-element">Back-office</div>
+                        <div class="menu-element"><span>Buscar vuelos</span> </div>
+                        <div class="menu-element"> <span>Clientes</span></div>
+                        <div class="menu-element"> <span>Estatus</span></div>
+                        <div class="menu-element"> <span>Check-in</span></div>
+                    </div>
+                    <div class="menu-section">
+                        <div class="menu-header menu-element">Detalles</a></div>
+                        <div class="menu-element"><span>Rutas</a></span>
+                    </div>
                 </div>
-                <div class="col-md-8">
+            
+            </div>
+            <div class="col-md-7 offset-1" id="root">
 
+                <div class="search-flight-form">
+                    <div class="form-element text-element">
+                        <input type="text" id="origin" placeholder="Origen">
+                    </div>
+                    <div class="form-element text-element">
+                        <input type="text" id="destination" placeholder="Destino">
+                    </div>
+                    <div class="form-element">
+                        <input type="text">
+                    </div>
+                    <div class="form-element">
+                        <input type="date">
+                    </div>
+                    <div class="form-element">
+                        <input type="number" min="1" max="4" placeholder="Pasajeros">
+                    </div>
+                    <div class="form-element">
+                        <input type="button" value="Buscar" id="search-btn">
+                    </div>
                 </div>
+
             </div>
         </div>
     </main>

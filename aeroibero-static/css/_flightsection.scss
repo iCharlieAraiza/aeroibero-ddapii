@@ -1,0 +1,42 @@
+.search-flight-form{
+    display: flex;
+    justify-content: space-between;
+    background-color: #DCE7ED;
+    box-shadow: $shadow;
+
+    padding: 1rem;
+
+    input{
+        width: 100%;
+    }
+
+    input[type="text"],[type="number"]{
+        width: 100%;
+    }
+
+    input[type="number"]{
+        min-width: 8rem;
+    }
+
+    .form-element{
+        margin-right: 10px;
+    }
+
+    .text-element{
+        min-width: 20%;
+    }
+
+    #search-btn{
+        background-color: $color-yellow;
+        border: 1px solid rgb(212, 212, 212);
+        box-shadow: $shadow;
+        border-radius: 4px;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+        color: $color-base-grey;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+}
