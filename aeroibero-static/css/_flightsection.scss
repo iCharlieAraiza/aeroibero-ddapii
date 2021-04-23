@@ -52,12 +52,21 @@
 
 
 .result-list-section{
+
+    .tabel-result{
+        padding: 1.5rem 0px;
+        font-weight: 600;
+        font-size: 15px;
+        color: $color-base-grey;
+    }
+
     .flight-card{
         background: #fff;
         box-shadow: $shadow;
         font-weight: 600;
         padding: 1.5rem;
         border-left: 5px solid #7d7d7d;
+        margin-bottom: 1rem;
 
         .horizontal{
             display: flex;
@@ -65,13 +74,14 @@
 
         .label{
             text-transform: uppercase;
-            color: $color-base-grey;
+            color: #a4a4a4;
             margin-right:5px;
         }
 
 
         .aircraft{
             margin-right: auto;
+            margin-left: 2rem;
         }
 
         .top-section{
@@ -86,12 +96,48 @@
         .flight-icon{
             img{
                 width: 70px;
+                margin-top: 2px;
             }
         }
 
         .bottom-section{
             display: flex;
             justify-content: space-between;
+            margin-top: 1rem;
+
+            .section-cont{
+                max-width: 120px;
+            }
+
+            .result{
+                text-align: center;
+                margin-top: 15px;
+                span{
+                    color: #acacac;
+                }
+            }
+        }
+
+        .show-flight-btn{
+            padding: 12px 2rem;
+            background-color: $color-blue;
+            color: #DCE7ED;
+            border-radius: 2px;
+            border: 2px solid rgb(80, 80, 80);
+            box-shadow: $shadow;
+        }
+
+        .flight-state{
+            display: flex;
+            align-items: center;
+            span{
+                display: block;
+                width: 12px;
+                height: 12px;
+                background-color: green;
+                border-radius: 50%;
+                margin-left: 10px;
+            }
         }
 
     }

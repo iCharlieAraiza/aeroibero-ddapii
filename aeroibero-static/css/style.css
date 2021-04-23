@@ -1,6 +1,7 @@
 * {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 14px;
+  color: #535353;
 }
 
 a {
@@ -169,6 +170,13 @@ header .user a {
   width: 10rem;
 }
 
+.result-list-section .tabel-result {
+  padding: 1.5rem 0px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #707070;
+}
+
 .result-list-section .flight-card {
   background: #fff;
   -webkit-box-shadow: 0 6px 6px -2px #b3b3b3;
@@ -176,6 +184,7 @@ header .user a {
   font-weight: 600;
   padding: 1.5rem;
   border-left: 5px solid #7d7d7d;
+  margin-bottom: 1rem;
 }
 
 .result-list-section .flight-card .horizontal {
@@ -186,12 +195,13 @@ header .user a {
 
 .result-list-section .flight-card .label {
   text-transform: uppercase;
-  color: #707070;
+  color: #a4a4a4;
   margin-right: 5px;
 }
 
 .result-list-section .flight-card .aircraft {
   margin-right: auto;
+  margin-left: 2rem;
 }
 
 .result-list-section .flight-card .top-section {
@@ -209,6 +219,7 @@ header .user a {
 
 .result-list-section .flight-card .flight-icon img {
   width: 70px;
+  margin-top: 2px;
 }
 
 .result-list-section .flight-card .bottom-section {
@@ -218,5 +229,47 @@ header .user a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.result-list-section .flight-card .bottom-section .section-cont {
+  max-width: 120px;
+}
+
+.result-list-section .flight-card .bottom-section .result {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.result-list-section .flight-card .bottom-section .result span {
+  color: #acacac;
+}
+
+.result-list-section .flight-card .show-flight-btn {
+  padding: 12px 2rem;
+  background-color: #295EA9;
+  color: #DCE7ED;
+  border-radius: 2px;
+  border: 2px solid #505050;
+  -webkit-box-shadow: 0 6px 6px -2px #b3b3b3;
+          box-shadow: 0 6px 6px -2px #b3b3b3;
+}
+
+.result-list-section .flight-card .flight-state {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.result-list-section .flight-card .flight-state span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: green;
+  border-radius: 50%;
+  margin-left: 10px;
 }
 /*# sourceMappingURL=style.css.map */
