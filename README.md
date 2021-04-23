@@ -2,4 +2,4 @@
 
 Proyecto para la asignatura de Desarrollo de Aplicaciones II
 
-- [ ] Definir el diseño de la arquitectura
+- [x] Definir el diseño de la arquitectura
