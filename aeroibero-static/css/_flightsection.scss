@@ -14,8 +14,13 @@
         width: 100%;
     }
 
+    select, input[type="date"]{
+        height: 100%;
+        color: rgb(105, 105, 105);
+    }
+
     input[type="number"]{
-        min-width: 8rem;
+        min-width: 7rem;
     }
 
     .form-element{
@@ -39,4 +44,55 @@
         padding-right: 1.5rem;
     }
 
+    .date-form{
+        width: 10rem;
+    }
+
+}
+
+
+.result-list-section{
+    .flight-card{
+        background: #fff;
+        box-shadow: $shadow;
+        font-weight: 600;
+        padding: 1.5rem;
+        border-left: 5px solid #7d7d7d;
+
+        .horizontal{
+            display: flex;
+        }
+
+        .label{
+            text-transform: uppercase;
+            color: $color-base-grey;
+            margin-right:5px;
+        }
+
+
+        .aircraft{
+            margin-right: auto;
+        }
+
+        .top-section{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .fligth-number{
+            margin-right: 1rem;
+        }
+
+        .flight-icon{
+            img{
+                width: 70px;
+            }
+        }
+
+        .bottom-section{
+            display: flex;
+            justify-content: space-between;
+        }
+
+    }
 }

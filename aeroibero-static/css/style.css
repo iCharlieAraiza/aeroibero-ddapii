@@ -14,14 +14,27 @@ main {
   padding-top: 7rem;
 }
 
-input[type="text"], [type="number"], [type="date"] {
+select, input[type="text"], [type="number"], [type="date"] {
   border: none;
   border-bottom: 2px solid #a5a5a5;
+}
+
+select:focus, input[type="text"]:focus, [type="number"]:focus, [type="date"]:focus {
+  outline: none;
 }
 
 input {
   padding: 8px;
   height: 100%;
+}
+
+@media (min-width: 1500px) {
+  .col-xxl-6 {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+  }
 }
 
 header {
@@ -121,8 +134,13 @@ header .user a {
   width: 100%;
 }
 
+.search-flight-form select, .search-flight-form input[type="date"] {
+  height: 100%;
+  color: dimgray;
+}
+
 .search-flight-form input[type="number"] {
-  min-width: 8rem;
+  min-width: 7rem;
 }
 
 .search-flight-form .form-element {
@@ -145,5 +163,60 @@ header .user a {
   color: #707070;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.search-flight-form .date-form {
+  width: 10rem;
+}
+
+.result-list-section .flight-card {
+  background: #fff;
+  -webkit-box-shadow: 0 6px 6px -2px #b3b3b3;
+          box-shadow: 0 6px 6px -2px #b3b3b3;
+  font-weight: 600;
+  padding: 1.5rem;
+  border-left: 5px solid #7d7d7d;
+}
+
+.result-list-section .flight-card .horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.result-list-section .flight-card .label {
+  text-transform: uppercase;
+  color: #707070;
+  margin-right: 5px;
+}
+
+.result-list-section .flight-card .aircraft {
+  margin-right: auto;
+}
+
+.result-list-section .flight-card .top-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.result-list-section .flight-card .fligth-number {
+  margin-right: 1rem;
+}
+
+.result-list-section .flight-card .flight-icon img {
+  width: 70px;
+}
+
+.result-list-section .flight-card .bottom-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=style.css.map */

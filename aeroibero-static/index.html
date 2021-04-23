@@ -50,7 +50,7 @@
                 </div>
             
             </div>
-            <div class="col-md-7 offset-1" id="root">
+            <div class="col-md-10 col-lg-8 col-xxl-6 offset-1" id="root">
 
                 <div class="search-flight-form">
                     <div class="form-element text-element">
@@ -60,16 +60,97 @@
                         <input type="text" id="destination" placeholder="Destino">
                     </div>
                     <div class="form-element">
-                        <input type="text">
+                        <select>
+                            <option value="">Más económico</option>
+                            <option value="">Menor distancia</option>
+                            <option value="">Menor tiempo</option>
+                        </select>
                     </div>
-                    <div class="form-element">
-                        <input type="date">
+                    <div class="form-element date-form">
+                        <input type="date" placeholder="Fecha: dd/mm/aaaa">
                     </div>
                     <div class="form-element">
                         <input type="number" min="1" max="4" placeholder="Pasajeros">
                     </div>
                     <div class="form-element">
                         <input type="button" value="Buscar" id="search-btn">
+                    </div>
+                </div>
+
+                <div class="result-list-section">
+                    <div class="result-list">
+                        <div class="tabel-result">
+                            Opción más económica
+                        </div>
+                    </div>
+                    <div class="result-btn">
+                        
+                        <!---BEGIN: card -->
+                        <div class="flight-card">
+
+                            <div class="row-description top-section">
+
+                                <div class="section-cont horizontal fligth-number">
+                                    <div class="label">
+                                        Vuelo
+                                    </div>
+                                    <div class="result">1234</div>
+                                </div>
+
+                                <div class="section-cont horizontal aircraft">
+                                    <div class="label">
+                                        Avión
+                                    </div>
+                                    <div class="result">Airbus A320</div>
+                                </div>
+
+                                <div class="section-cont horizontal">
+                                    <div class="label">
+                                        HORA
+                                    </div>
+                                    <div class="result">10:20</div>
+                                    <div class="flight-state"><span></span></div>
+                                </div>
+
+                            </div>
+                            
+                            <div class="row-description bottom-section">
+
+                                <div class="section-cont ">
+                                    <div class="label">
+                                        Origen
+                                    </div>
+                                    <div class="result">
+                                        Narnia <span>(LRA)</span>
+                                    </div>
+                                </div>
+
+                                <div class="section-cont ">
+                                    <div class="label">
+                                        Descripción
+                                    </div>
+                                    <div class="result">
+                                        Narnia <span>(LRA)</span>
+                                    </div>
+                                </div>
+
+                                <div class="section-cont ">
+                                    <div class="label">
+                                        Duración
+                                    </div>
+                                    <div class="flight-icon">
+                                        <img src="img/flight.png" alt="">
+                                    </div>
+                                    <div class="result">
+                                        02:30
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!---END: card -->
+
                     </div>
                 </div>
 

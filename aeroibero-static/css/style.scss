@@ -16,14 +16,27 @@ main{
     padding-top: 7rem;
 }
 
-input[type="text"], [type="number"],[type="date"]{
+select, input[type="text"], [type="number"],[type="date"]{
     border: none;
     border-bottom: 2px solid rgb(165, 165, 165);
+    &:focus{
+        outline: none;
+    }
 }
 
+
 input{
+
     padding: 8px;
     height: 100%;
+}
+
+
+@media (min-width: 1500px) {
+    .col-xxl-6{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
 }
 
 
