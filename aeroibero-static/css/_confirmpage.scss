@@ -1,0 +1,64 @@
+#confirm-page{
+    .form-section{
+        background-color: rgb(255, 255, 255);
+        box-shadow: $shadow;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .title-confirm{
+        text-transform: uppercase;
+        font-weight: 800;
+        text-align: center;
+        padding: 2rem;
+        font-size: 18px;
+    }
+
+    .check-logo{
+        padding-bottom: 3rem;
+        img{
+            display: block;
+            margin: auto;
+            width: 100;
+        }
+    }
+
+    .details-reservation{
+        padding: 2rem;
+        .form-group{
+            text-transform: uppercase;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            .label{
+                margin-bottom: 5px;
+            }
+            .tag{
+                color: rgb(146, 146, 146);
+            }
+        }
+    }
+
+    .section-title{
+        text-transform: uppercase;
+        font-size: 14px !important;
+        max-width: 230px;
+        font-weight: 600;
+        color: #203856;
+        padding: 2rem 0;
+    }
+
+    #ticket{
+        margin: 0 2rem;
+    }
+
+    .btn-section{
+        button{
+            padding: 1rem;
+        }
+    }
+
+    .qr-section{
+        
+    }
+
+}

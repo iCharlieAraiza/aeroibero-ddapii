@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+	<link href="http://asistentevoz.codigohabil.com/sc/grid.css"rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Aeroibero</title>
+</head>
+<body>
+    
+    <header>
+        <div class="btn-menu-wrapp">
+            <div class="btn-menu">
+                <button>
+                    <div class="div">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="img/logo_ai.jpg" alt="">
+        </div>
+        <div class="user-section">
+            <div class="user">
+                <a href="http://"><i class="fas fa-user-circle"></i> Usuario</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="fluid-container">
+            <div class="row row-main">
+                <div class="col-md-2">
+                    <div class="menu-section">
+                        <div class="menu-header menu-element">Back-office</div>
+                        <div class="menu-element"><span>Buscar vuelos</span> </div>
+                        <div class="menu-element"> <span>Clientes</span></div>
+                        <div class="menu-element"> <span>Estatus</span></div>
+                        <div class="menu-element"> <span>Check-in</span></div>
+                    </div>
+                    <div class="menu-section">
+                        <div class="menu-header menu-element">Detalles</a></div>
+                        <div class="menu-element"><span>Rutas</a></span>
+                    </div>
+                </div>
+            
+            </div>
+            
+            <!-- Main container -->
+            
+            <div class="col-md-10 col-lg-8 col-xxl-6 offset-1" id="root">
+                <div id="form-booking" class="row">
+
+                    <div class="left-column col-md-8">
+
+
+                        <!--Begin: Find client section -->
+                        <div class="find-client form">
+                            <div class="form-container">
+                                <div class="section-title">
+                                    Buscar usuario <span>(POR #)</span>
+                                </div>
+                                
+                                <div class="search-form">
+                                    <input type="text" placeholder="Número">
+                                </div>
+
+                                <div class="btn-sec">
+                                    <button>Buscar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!---End: Find client section-->
+
+                        <div class="client-data form">
+                            <div class="form-container">
+                                <div class="section-title">
+                                    <i class="fas fa-info-circle"></i> Datos del pasajero
+                                </div>
+                                <div class="row-group row">
+                                    <div class="input-group col-md-6">
+                                        <div class="label">Nombre</div>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Nombre">
+                                        </div>
+                                    </div>
+                                    <div class="input-group col-md-6">
+                                        <div class="label">Apellidos</div>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Apellidos">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row-group row">
+
+                                    <div class="input-group col-md-6">
+                                        <div class="label">Nacionalidad</div>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Ej: Mediterraneo">
+                                        </div>
+                                    </div>
+
+                                    <div class="input-group col-md-6">
+                                        <div class="label">Raza</div>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Humana">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row-group row">
+                                    <div class="input-group col-md-6">
+                                        <div class="label">Email</div>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="nombre@correo.com">
+                                        </div>
+                                    </div>
+                                    <div class="input-group col-md-6">
+                                        <div class="label">Teléfono</div>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Ej: 55-5555-55">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="pay-data form">
+                            <div class="form-container">
+                                <div class="section-title">
+                                    Detalles de pago
+                                </div>
+                                <div class="row-group col-md-8">
+                                    <div class="label">Nombre completo del titular</div>
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Nombre y apellidos">
+                                    </div>
+                                </div>
+                                <div class="row-group row">
+                                    <div class="input-group col-md-8" >
+                                        <div class="label">Número de tarjeta</div>
+                                        <div class="form-group card-group">
+                                            <i class="fab fa-cc-visa"></i><input type="text" placeholder="Número de tarjeta">
+                                        </div>
+                                    </div>
+
+                                    <div class="input-group col-md-4">
+                                        <div class="label">CSV</div>
+                                        <div class="form-group">
+                                            <input type="text" placeholder="3 digitos">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="rigth-column col-md-4 form">
+                        <div class="form-container">
+                            <div class="pay-control">
+                                <div class="section-title">
+                                    Recibo de pago
+                                </div>
+                                <div class="list-prices">
+                                    <ul>
+                                        <li><div>Vuelo 1</div><div class="price">$1100</div></li>
+                                        <li><div>Vuelo 2</div><div class="price">$100</div></li>
+                                    </ul>
+                                    <div class="total-result">
+                                        <div class="title-total">
+                                            Monto total:
+                                        </div>
+                                        <div class="price">
+                                            $1200
+                                        </div>
+                                    </div>
+                                    <div class="btn-sec">
+                                        <button id="confirm">Confirmar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        
+        </div>
+    </main>
+
+    <script>
+        document.getElementById("confirm").onclick = (e)=>{
+            e.preventDefault();
+            window.location.href = "http://127.0.0.1:5500/confirm.html";
+        }
+    </script>
+</body>
+</html>

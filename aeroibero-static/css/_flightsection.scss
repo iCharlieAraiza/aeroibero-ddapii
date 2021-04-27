@@ -52,11 +52,12 @@
 
 
 .result-list-section{
+    margin-top: 1rem;
 
     .tabel-result{
         padding: 1.5rem 0px;
-        font-weight: 600;
-        font-size: 15px;
+        font-weight: 300;
+        font-size: 18px;
         color: $color-base-grey;
     }
 
@@ -103,28 +104,33 @@
         .bottom-section{
             display: flex;
             justify-content: space-between;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
 
             .section-cont{
-                max-width: 120px;
+                width: 120px;
             }
 
             .result{
-                text-align: center;
                 margin-top: 15px;
                 span{
                     color: #acacac;
                 }
             }
+
+            .duration-section{
+                margin-top: 5px;
+            }
+
         }
 
         .show-flight-btn{
             padding: 12px 2rem;
-            background-color: $color-blue;
-            color: #DCE7ED;
+            background-color: #ff5d5d;
+            color: #ffffff;
             border-radius: 2px;
-            border: 2px solid rgb(80, 80, 80);
+            border: 1px solid #b2b2b2;
             box-shadow: $shadow;
+            float: right;
         }
 
         .flight-state{
@@ -139,6 +145,34 @@
                 margin-left: 10px;
             }
         }
+    }
+}
+
+
+.button-wrapper{
+    .group-btn{
+        display: flex;
+        float: right;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    button{
+        margin-right: 1.5rem;
+        padding: 8px 1.5rem;
+        background-color: $color-blue;
+        color: #ffffff;
+        border-radius: 4px;
+        border: 1px solid #295EA9;
+        font-weight: 500;
+        text-transform: uppercase;
+        box-shadow: $shadow;
+    }
+
+    .display{
+        margin-right: 1rem;
+        font-size: 16px;
+        font-weight: 300;
 
     }
 }

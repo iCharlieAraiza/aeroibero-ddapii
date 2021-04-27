@@ -32,6 +32,12 @@ input{
     height: 100%;
 }
 
+.fas{
+    font-size: 16px;
+    margin-right: 4px;
+    color: #767676;
+}
+
 
 @media (min-width: 1500px) {
     .col-xxl-6{
@@ -46,3 +52,7 @@ input{
 @import "sidebar";
 
 @import "flightsection";
+
+@import "formsection";
+
+@import "confirmpage";

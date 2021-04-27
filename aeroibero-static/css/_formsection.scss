@@ -1,0 +1,110 @@
+#form-booking{
+    .form{
+        padding: 1rem;
+    }
+    .form-container{
+        background-color: rgb(255, 255, 255);
+        padding: 15px;
+    }
+
+    button{
+        padding: 8px 2rem;
+        background-color: #114e8bf2;
+        color: #ffffff;
+        border-radius: 2px;
+        border: 1px solid #b2b2b2;
+        box-shadow: 0 6px 6px -2px #b3b3b3;
+    }
+
+    .qr-section{
+        width: 130px;
+    }
+
+    .label{
+        margin-left: 7px;
+        font-weight: 700;
+    }
+
+    .row-group{
+        padding: 1.5rem 1rem;
+    }
+
+    .form-group{
+        input{
+            width: 100%;
+        }
+    }
+
+    .section-title{
+        text-transform: uppercase;
+        font-size: 14px !important;
+        max-width: 230px;
+        font-weight: 600;
+        color: #203856;
+        padding: 1rem;
+        span{
+            color: rgb(139, 139, 139);
+        }
+    }
+
+    .pay-control{
+        .section-title{
+            text-align: center;
+            padding-right: 0;
+        }
+
+        ul{
+            padding: 0.2rem 1rem;
+            list-style: none;
+            li{
+                display: flex;
+                justify-content: space-between;
+                margin: 10px 0;
+            }
+        }
+
+        .total-result{
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            .title-total, .price{
+                font-size: 16px;
+            }
+            .title-total{
+                font-weight: 800;
+            }
+        }
+        .btn-sec{
+            margin: 1rem 0;
+            button{
+                width: 100%;
+            }
+        }
+
+    }
+
+    .card-group{
+        display: flex;
+        align-items: center;
+        i{
+            color: #00318d;
+            font-size: 22px;
+        }
+    }
+
+    .find-client{
+        .form-container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .search-form{
+                margin-left: auto;
+                margin-right: 1rem;
+                input{
+                    width: 15rem;
+                }
+            }
+        }
+    }
+
+}
