@@ -298,7 +298,7 @@ header .user a {
   margin-top: 2rem;
 }
 
-.button-wrapper button {
+.button-wrapper button, .button-wrapper a {
   margin-right: 1.5rem;
   padding: 8px 1.5rem;
   background-color: #335679f2;

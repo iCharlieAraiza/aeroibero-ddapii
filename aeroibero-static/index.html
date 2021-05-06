@@ -410,52 +410,12 @@
         </div>
     </main>
 
+
+    <script src="js/main.js"></script>
+
     <script>
 
-        document.getElementById("reservation").onclick = (e)=>{
-            e.preventDefault();
-            window.location.href = "http://127.0.0.1:5500/book.html";
-        }
 
-        document.getElementById("search-btn").onclick = ()=>{
-            const cheaper = document.getElementById('cheaper');
-            const faster = document.getElementById("faster");
-    
-
-            const val = document.getElementById("select_option").value;
-            
-            if(val==1){
-                faster.style.display = "none";
-                cheaper.style.display = "block"
-            }else if(val==3){
-                faster.style.display = "block";
-                cheaper.style.display = "none"
-
-            }
-        }
-        
-        const airports = ["Narnia - Aeropuerto Leon Real", 
-                        "La comarca - Aeropuerto Bilbo Bolsón", 
-                        "Mordor - Aeropuerto Ojo de Sauron",
-                        "Rivendel - Altos Elfos",
-                        "Rohan - Aeropuerto Caballo Verde",
-                        "Reino del Bosque - Aeropuerto Elfos Silvanos",
-                        "Erebor - Aeropuerto Durin",
-                        "Gondor - Aeropuerto Isildur"
-                    ];
-
-        $(function(){
-            $("#origin").autocomplete({
-                source: airports,
-                minLenght: 3
-            });
-
-            $("#destination").autocomplete({
-                source: airports,
-                minLenght: 3
-            })
-
-        });
     </script>
 
 </body>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+	<link href="http://asistentevoz.codigohabil.com/sc/grid.css"rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+        .ui-menu{
+            background-color: white;
+            list-style: none;
+            width: 300px;
+            box-shadow: 0 6px 6px -2px #b3b3b3;
+        }
+
+        .ui-menu li{
+            padding: 1rem;
+        }
+    </style>
+    
+    <title>Aeroibero</title>
+</head>
+<body>
+    
+    <header>
+        <div class="btn-menu-wrapp">
+            <div class="btn-menu">
+                <button>
+                    <div class="div">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="img/logo_ai.jpg" alt="">
+        </div>
+        <div class="user-section">
+            <div class="user">
+                <a href="http://">Usuario</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="fluid-container">
+            <div class="row row-main">
+                <div class="col-md-2">
+                    <div class="menu-section">
+                        <div class="menu-header menu-element">Back-office</div>
+                        <div class="menu-element"><span>Buscar vuelos</span> </div>
+                        <div class="menu-element"> <span>Clientes</span></div>
+                        <div class="menu-element"> <span>Estatus</span></div>
+                        <div class="menu-element"> <span>Check-in</span></div>
+                    </div>
+                    <div class="menu-section">
+                        <div class="menu-header menu-element">Detalles</a></div>
+                        <div class="menu-element"><span>Rutas</a></span>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="col-md-10 col-lg-8 col-xxl-6 offset-1" id="root">
+
+                <div class="search-flight-form">
+                    <div class="form-element text-element">
+                        <input id="origin" type="text" id="origin" placeholder="Origen">
+                    </div>
+                    <div class="form-element text-element">
+                        <input type="text" id="destination" placeholder="Destino">
+                    </div>
+                    <div class="form-element">
+                        <select id="select_option">
+                            <option value="1">Más económico</option>
+                            <option value="2">Más corto</option>
+                            <option value="3">Más rápido</option>
+                        </select>
+                    </div>
+                    <div class="form-element date-form">
+                        <input type="date" placeholder="Fecha: dd/mm/aaaa">
+                    </div>
+                    <div class="form-element">
+                        <input type="number" min="1" max="4" placeholder="Pasajeros">
+                    </div>
+                    <div class="form-element">
+                        <input type="button" value="Buscar" id="search-btn">
+                    </div>
+                </div>
+
+
+                <!--- Begin: List container -->
+
+                <div id="faster" class="result-list-section" >
+
+                    <div id="result-container" class="result-btn">
+
+                    </div>
+                </div>
+
+
+                <!--- Ende: List container -->
+
+                <div class="button-wrapper">
+                    <div class="group-btn">
+                        <div class="display">
+                            ¿Deseas elegirlo?
+                        </div>
+                        <a href="/" id="reservation">Reservar</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+    <script src="js/main.js"></script>
+
+    <script>
+
+
+    </script>
+
+</body>
+</html>
