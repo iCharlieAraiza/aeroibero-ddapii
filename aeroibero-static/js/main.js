@@ -1,62 +1,97 @@
+document.getElementById("reservation-btn").style.display = "none";
 document.getElementById("search-btn").onclick = ()=>{
     const resultList = document.querySelector('.result-list-section');
+    //document.getElementById('reservation-btn').style.display = "none";
 
 
     const val = document.getElementById("select_option").value;
     
-    if(val==1){
+    if(isValid()){
         
         let flightList = headerResults();
-
+        
+        /*
         flights.forEach(flight=>{
             flightList += createCard(flight);
         })
+        */
+
+        const origin = document.getElementById('origin').value;
+        const destination = document.getElementById('destination').value;
+        const passagers = document.getElementById('number').value;
+        //alert(origin)
+        
+        const originIndex = getIndex(airportsTest, origin);
+        const toIndex = getIndex(airportsTest, destination);
+        //console.log(originIndex, toIndex);
+
+        fetch(`http://localhost:8080/api/vuelos/prueba/id/${originIndex}/${toIndex}`, {
+            method: 'GET',
+        })
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+
+
+            const resultList = document.querySelector('.result-list-section');
+            let response= headerResults();
+            let cont = 0;
+            data.forEach(e=>{
+                response+=createCard(e);
+            })
+    
+            resultList.innerHTML = response;
+            console.log("contador " + cont)
+            document.getElementById("reservation-btn").style.display = "block";
+            document.getElementById("reservation").href = `http://127.0.0.1:5500/book-test.html?p=${passagers}&${createAttr(data)}`;
+        })
+        .catch(function(err) {
+            console.error("Ups, somethin happended");
+        });
 
         //window.location.href = "http://127.0.0.1:5500/index-test.html"+createAttr(flights);
-        document.getElementById("reservation").href = `http://127.0.0.1:5500/index-test.html${createAttr(flights)}`;
 
-        resultList.innerHTML = flightList;
+        
 
-    }else if(val==3){
-        faster.style.display = "block";
-        cheaper.style.display = "none"
-        cheaper.innerHTML = flightList = createCard({to:'hola',from:'mundo'});
-
+    }else{
+        alert("Valor inválido");
     }
 }
 
-const airports = ["Narnia - Aeropuerto Leon Real", 
-                "La comarca - Aeropuerto Bilbo Bolsón", 
-                "Mordor - Aeropuerto Ojo de Sauron",
-                "Rivendel - Altos Elfos",
-                "Rohan - Aeropuerto Caballo Verde",
-                "Reino del Bosque - Aeropuerto Elfos Silvanos",
-                "Erebor - Aeropuerto Durin",
-                "Gondor - Aeropuerto Isildur"
-            ];
+
+const airportsTest = [
+    {id: 1, value: "La Comarca – Aeropuerto Bilbo Bolsón" },
+    {id: 2, value: "Rivendel - Aeropuerto Altos Elfos" },
+    {id: 3, value: "Rohan - Aeropuerto Caballo Verde" },
+    {id: 4, value: "Reino del Bosque - Aeropuerto Elfos Silvanos" },
+    {id: 5, value: "Erebor - Aeropuerto Durin" },
+    {id: 6, value: "Gondor - Aeropuerto Isildur" },
+    {id: 7, value: "Moria - Aeropuerto Khazad Dum" },
+    {id: 8, value: "Isengard - Aeropuerto Mago Blanco" },
+    {id: 9, value: "Mordor - Aeropuerto Ojo de Sauron" },
+    {id: 10, value: "Narnia - Aeropuerto León Real" },
+    {id: 11, value: "Telmar - Aeropuerto Príncipe Caspian" },
+    {id: 12, value: "Charn - Aeropuerto Bruja Blanca" },
+    {id: 13, value: "Ciudad Aeropuerto Mago de Oz - Bruja Blanca" },
+    {id: 14, value: "Winkie - Aeropuerto Bruja del Oeste" },
+    {id: 14, value: "Munchkin - Aeropuerto Dorita" },
+]
+
 
 $(function(){
     $("#origin").autocomplete({
-        source: airports,
+        source: airportsTest,
         minLenght: 3
     });
 
     $("#destination").autocomplete({
-        source: airports,
+        source: airportsTest,
         minLenght: 3
     })
 
 });
 
-
-
-const flights = [
-    {id: 1, to: 'hola', from: 'mundo'},
-    {id: 2, to: 'Cómo', from: 'estas'},
-    {id: 3, to: 'espero no', from: 'del todo mal'},
-    {id: 5, to: 'espero no', from: 'del todo mal'},
-    {id: 9, to: 'espero no', from: 'del todo mal'},
-]
 
 
 const createCard = (flight)=>{
@@ -68,7 +103,7 @@ const createCard = (flight)=>{
         <div class="label">
             Vuelo
         </div>
-        <div class="result">1234</div>
+        <div class="result">AI #${flight.id}</div>
     </div>
 
     <div class="section-cont horizontal aircraft">
@@ -95,7 +130,7 @@ const createCard = (flight)=>{
             Origen
         </div>
         <div class="result">
-            ${flight.from} <span>(LRA)</span>
+            ${flight.origen.nombre} <span>(LRA)</span>
         </div>
     </div>
 
@@ -104,7 +139,7 @@ const createCard = (flight)=>{
             Destino
         </div>
         <div class="result">
-            ${flight.to} a <span>(LRA)</span>
+            ${flight.destino.nombre} <span>(LRA)</span>
         </div>
     </div>
 
@@ -125,7 +160,7 @@ const createCard = (flight)=>{
             Distancia
         </div>
         <div class="result">
-            230 <span>(KM)</span>
+        ${flight.distancia} <span>(KM)</span>
         </div>
     </div>
 
@@ -134,7 +169,7 @@ const createCard = (flight)=>{
             Precio
         </div>
         <div class="result">
-            $100
+            $${flight.costo}
         </div>
     </div>
 
@@ -158,7 +193,7 @@ const headerResults = ()=>{
 }
 
 const createAttr = (flights)=>{
-    let attr = "?", i = 0;
+    let attr = "", i = 0;
     flights.forEach(flight =>{
         attr +=`f${++i}=${flight.id}&`;
     });
@@ -177,10 +212,32 @@ const checkAttrValue = ()=>{
         }
     }
 
-    flights.forEach(flight =>{
-        console.log(flight);
-    });
-
 }
 
 checkAttrValue();
+
+
+const getIndex = (airports, value)=>{
+    let index = 0;
+
+    airports.forEach(airport => {
+        if(airport.value == value){
+            index = airport.id;
+        }
+    });
+    return index;
+}
+
+
+const isValid = ()=>{
+    const from = document.getElementById('origin').value; 
+    const to = document.getElementById('destination').value; 
+    const number = document.getElementById('number').value;
+    const origin = document.getElementById('origin').value;
+    const destination = document.getElementById('destination').value;
+
+    if(from===""|| to==="" || number=== "" || (origin === destination)) 
+        return false
+    else
+        return true;
+}

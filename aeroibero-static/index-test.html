@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
     <style>
         .ui-menu{
             background-color: white;
@@ -85,7 +86,7 @@
                         <input type="date" placeholder="Fecha: dd/mm/aaaa">
                     </div>
                     <div class="form-element">
-                        <input type="number" min="1" max="4" placeholder="Pasajeros">
+                        <input id="number" type="number" min="1" max="4" placeholder="Pasajeros">
                     </div>
                     <div class="form-element">
                         <input type="button" value="Buscar" id="search-btn">
@@ -105,8 +106,8 @@
 
                 <!--- Ende: List container -->
 
-                <div class="button-wrapper">
-                    <div class="group-btn">
+                <div id="reservation-btn" class="button-wrapper" >
+                    <div  class="group-btn" >
                         <div class="display">
                             ¿Deseas elegirlo?
                         </div>
@@ -118,7 +119,7 @@
         </div>
     </main>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/main.js"></script>
 
     <script>
