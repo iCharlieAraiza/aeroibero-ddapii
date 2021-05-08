@@ -9,6 +9,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Aeroibero</title>
+    <script async type="text/javascript" src="https://userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/7630b2248505485eb4be7264038ceff7746d401c7839477483ab643f263ff633.js"></script>
+
+    <style>
+        .flight-tag{
+            margin-bottom: 10px;
+        }
+        .flight-tag a{
+            color: #04446b;
+        }
+
+        .label{
+            margin-bottom: 1rem!important;
+        }
+
+
+    </style>
 </head>
 <body>
     
@@ -23,7 +39,9 @@
             </div>
         </div>
         <div class="logo">
-            <img src="img/logo_ai.jpg" alt="">
+            <a href="/index-test.html">
+                <img src="img/logo_ai.jpg" alt="">
+            </a>
         </div>
         <div class="user-section">
             <div class="user">
@@ -59,7 +77,7 @@
                         ¡Listo! Se ha hecho la reservación de forma adecuada
                     </div>
                     <div class="check-logo">
-                        <img src="img/check.png" alt="">
+                        <img id="confirmLogo" src="img/fast-loader.gif" alt="">
                     </div>
                 </div>
 
@@ -73,31 +91,14 @@
 
                             <div class="form-group">
                                 <div class="label">Confirmación</div>
-                                <div class="tag">Revisa tu correo electrónico <span>correo@email.com</span> con la lista de confirmación</div>
+                                <div class="tag">Hola <span id="nombre">Nombre</span>, revisa tu correo electrónico <span id="email">correo@email.com</span> con la lista de confirmación</div>
                             </div>
 
-                            <div class="form-group col-md-4">
-                                <div class="label">Nombre</div>
-                                <div class="tag">Juan</div>
-                            </div>
-
-                            <div class="form-group col-md-4">
-                                <div class="label">Apellidos</div>
-                                <div class="tag">Perez Rodriguez</div>
-                            </div>
-
-                            <div class="form-group col-md-4">
-                                <div class="label">Email</div>
-                                <div class="tag">Juan@gmail.com</div>
-                            </div>
-                            <div class="form-group col-md-4">
-                                <div class="label">Telefono</div>
-                                <div class="tag">55-2033-2210</div>
-                            </div>
                             <div class="form-group col-md-12">
                                 <div class="label">Vuelos</div>
-                                <div class="tag">Vuelo 1</div>
-                                <div class="tag">Vuelo 2</div>
+                                <div class="wrapper">
+
+                                </div>
                             </div>
                     </div>
                     
@@ -108,5 +109,30 @@
         </div>
     </main>
 
+
+
+    <div class="loader">
+        <img src="img/plane-loader.gif" alt="" sizes="" srcset="">
+    </div>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript">
+(function() {
+emailjs.init("user_YJwFI1n9nOXCcuRnbAbgB");
+})();
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/confirm.js"></script>
+
+    <script>
+
+        setTimeout(()=>{
+            document.querySelector('.loader').style.display = "none";
+        },2000);
+
+
+
+    </script>
 </body>
 </html>
